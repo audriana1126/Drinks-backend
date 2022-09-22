@@ -1,5 +1,3 @@
-// todo: Need API data  1. market route  2. trade route  3. user and coins association
-
 const express = require('express')
 const router = express.Router()
 
@@ -8,33 +6,45 @@ const {Drinks} = require('../models')
 
 
 
-
 // coins/markets
 // verify frontend route - where to send this data
 // ties user to their purchased coins
 // market route
-router.get("/drinks", async (req, res) => {
-	try {
-    if (req.query.name) {
-      res.json(await Drinks.find({strDrink: req.query.name}))
-    } else {
-      res.json(await Drinks.find({}))
-    }
+// router.get("/drinks", async (req, res) => {
+// 	try {
+//     if (req.query.name) {
+//       res.json(await Drinks.find({strDrink: req.query.name}))
+//     } else {
+//       res.json(await Drinks.find({}))
+//     }
     
-		// res.json(await Coin.find({}).populate("owner").exec()); //modify populate parameters 
-	} catch (error) {
-		res.status(400).json(error);
-	}
+// 		// res.json(await Coin.find({}).populate("owner").exec()); //modify populate parameters 
+// 	} catch (error) {
+// 		res.status(400).json(error);
+// 	}
+// })
+
+
+
+router.post("/drinks", async (req, res) => {
+  try {
+    // create new person
+    res.json(await Drinks.create(req.body));
+  } catch (error) {
+    //send error
+    res.status(400).json(error);
+  }
 });
 
-// // verify route 
-router.get("/:drinkId", async (req, res) => {
-    try {
-        res.json(await Drinks.findById(req.params.id)); 
-      } catch (error) {
-        res.status(400).json(error);
-      }
-});
+
+// // // verify route 
+// router.get("/:drinkId", async (req, res) => {
+//     try {
+//         res.json(await Drinks.findById(req.params.drinkId)); 
+//       } catch (error) {
+//         res.status(400).json(error);
+//       }
+// });
 
 
 
