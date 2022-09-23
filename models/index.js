@@ -1,9 +1,6 @@
 
-// * Creating an index.js allows us to export multiple models 
-
-require('../config/db.connection') // for best practice, establish connection here
+require('../config/db.connection') 
 
 module.exports = {
     Drinks: require('./Drinks'),
-    User: require('./User')
 }
