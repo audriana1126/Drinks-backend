@@ -1,4 +1,4 @@
-#Happy Hours 
+<h2 align="left">Happy Hours</h2>
 
 
 <h3 align="left">Description:</h3>
@@ -23,15 +23,12 @@ Happy hours is a website where you can not only find flavorful cocktails of your
 
 
 <h3 align="left">Prerequisites:</h3>
-Install NPM Packages: npm install npm@latest -g
-Clone the repo
-Create .env and add MongoDB_URI 
+Install NPM Packages: npm install npm@latest -g<br/>
+Clone the repo <br/>
+Create .env and add MongoDB_URI <br/>
 
  <h3 align="left">Contributers</h3>
-[Faiza, Audri, and Hazel](https://github.com/hazelrahbe/Project-3/graphs/contributors)
-
-
-
+<a href = "https://github.com/hazelrahbe/Project-3/graphs/contributors">Faiza, Audri, and Hazel</a>
 
 
 
