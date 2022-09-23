@@ -8,6 +8,8 @@ const morgan = require('morgan');
 
 
 
+// * Controllers
+const drinksController = require('./controllers/drinks_controller')
 
 // * Middleware
 app.use(express.json());  
@@ -16,8 +18,6 @@ app.use(cors());
 app.use(morgan('dev')); 
 app.use('/', drinksController)
 
-// * Controllers
-const drinksController = require('./controllers/drinks_controller')
 
  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
